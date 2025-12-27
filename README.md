@@ -208,8 +208,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Developer:** Prachi Yadav.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-profile)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prachi-yadav-60466b343)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/10Prachi2006)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:starletprachi@gmail.com)
 
 ---
@@ -251,7 +251,7 @@ The voice recognition feature uses Google's Speech Recognition API, which requir
 
 For questions, suggestions, or collaboration opportunities:
 
-**LinkedIn:** 
+**LinkedIn: www.linkedin.com/in/prachi-yadav-60466b343** 
 
 *Let's build the future of data interaction together!*
 
