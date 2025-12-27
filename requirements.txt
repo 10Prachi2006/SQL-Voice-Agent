@@ -1,0 +1,22 @@
+# Core Framework
+streamlit>=1.28.0
+
+# API Communication
+requests>=2.31.0
+
+# Audio Processing
+pyaudio>=0.2.13
+wave
+
+# Speech Recognition
+SpeechRecognition>=3.10.0
+
+# Data Processing
+pandas>=2.0.0
+
+# Langflow
+langflow>=1.0.0
+
+# Optional: For better audio quality
+# pydub>=0.25.1
+# ffmpeg-python>=0.2.0
