@@ -1,0 +1,301 @@
+import streamlit as st
+import requests
+import uuid
+from pathlib import Path
+import pyaudio
+import wave
+import speech_recognition as sr
+from io import BytesIO
+
+# Page configuration
+st.set_page_config(
+    page_title="Voice-SQL Assistant",
+    page_icon="🎤",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Custom CSS
+st.markdown("""
+    <style>
+    .main { padding: 2rem; }
+    .stButton>button {
+        width: 100%;
+        background-color: #1f77b4;
+        color: white;
+        font-weight: bold;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+    }
+    .stButton>button:hover { background-color: #1557a0; }
+    </style>
+""", unsafe_allow_html=True)
+
+# Initialize session state
+if 'session_id' not in st.session_state:
+    st.session_state.session_id = str(uuid.uuid4())
+if 'query_history' not in st.session_state:
+    st.session_state.query_history = []
+if 'recorded_text' not in st.session_state:
+    st.session_state.recorded_text = ""
+
+# API Configuration
+FLOW_ID = "3cc5f30f-1d18-466f-8b79-1c022167082a"
+LANGFLOW_API_URL = f"http://localhost:8000/api/v1/run/{FLOW_ID}"
+
+def record_audio(duration=5, sample_rate=16000):
+    """Record audio from microphone"""
+    CHUNK = 1024
+    FORMAT = pyaudio.paInt16
+    CHANNELS = 1
+    p = pyaudio.PyAudio()
+    
+    try:
+        stream = p.open(format=FORMAT, channels=CHANNELS, rate=sample_rate,
+                       input=True, frames_per_buffer=CHUNK)
+        frames = []
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+        total_chunks = int(sample_rate / CHUNK * duration)
+        
+        for i in range(total_chunks):
+            data = stream.read(CHUNK)
+            frames.append(data)
+            progress = (i + 1) / total_chunks
+            progress_bar.progress(progress)
+            status_text.text(f"🎤 Recording... {duration - int(i * CHUNK / sample_rate)} seconds left")
+        
+        progress_bar.empty()
+        status_text.empty()
+        stream.stop_stream()
+        stream.close()
+        p.terminate()
+        
+        audio_buffer = BytesIO()
+        wf = wave.open(audio_buffer, 'wb')
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(p.get_sample_size(FORMAT))
+        wf.setframerate(sample_rate)
+        wf.writeframes(b''.join(frames))
+        wf.close()
+        return audio_buffer.getvalue()
+    except Exception as e:
+        st.error(f"Recording error: {str(e)}")
+        return None
+
+def transcribe_audio(audio_data, language="en-US"):
+    """Transcribe audio to text"""
+    try:
+        recognizer = sr.Recognizer()
+        audio_file = BytesIO(audio_data)
+        with sr.AudioFile(audio_file) as source:
+            audio = recognizer.record(source)
+        return recognizer.recognize_google(audio, language=language)
+    except:
+        return "❌ Could not understand audio"
+
+def call_langflow_api(user_input):
+    """Call Langflow API - the file must be uploaded in Langflow UI first!"""
+    payload = {
+        "input_value": user_input,
+        "output_type": "chat",
+        "input_type": "chat",
+        "session_id": st.session_state.session_id
+    }
+    
+    try:
+        response = requests.post(LANGFLOW_API_URL, json=payload,
+                               headers={"Content-Type": "application/json"}, timeout=120)
+        response.raise_for_status()
+        return response.json()
+    except Exception as e:
+        st.error(f"API Error: {str(e)}")
+        return None
+
+def format_result(response_data):
+    """Extract text from Langflow response"""
+    if not response_data:
+        return None, "No data returned"
+    
+    try:
+        if isinstance(response_data, dict) and 'outputs' in response_data:
+            outputs = response_data['outputs']
+            if outputs and len(outputs) > 0:
+                first = outputs[0]
+                if 'outputs' in first and first['outputs']:
+                    result = first['outputs'][0]
+                    if 'results' in result and 'message' in result['results']:
+                        text = result['results']['message'].get('text', '')
+                        if 'error' in text.lower():
+                            return None, text
+                        return text, None
+        return str(response_data), None
+    except Exception as e:
+        return None, f"Parse error: {str(e)}"
+
+# Header
+st.title("🎤 Voice-SQL Assistant")
+st.markdown("### AI-Powered Natural Language to SQL")
+st.markdown("---")
+
+# CRITICAL SETUP WARNING
+st.error("""
+🚨 **MANDATORY SETUP - DO THIS FIRST:**
+
+1. Open Langflow: http://localhost:8000
+2. Open your "Voice-SQL" flow  
+3. Click "Excel to Database" component
+4. **UPLOAD YOUR EXCEL FILE** there
+5. **WAIT for green checkmark ✅**
+6. Come back here and start querying!
+
+**The file MUST be uploaded in Langflow, not here!**
+""")
+
+# Sidebar
+with st.sidebar:
+    st.header("📋 Session")
+    st.info(f"ID: `{st.session_state.session_id[:8]}...`")
+    if st.button("🔄 New Session"):
+        st.session_state.session_id = str(uuid.uuid4())
+        st.session_state.query_history = []
+        st.session_state.recorded_text = ""
+        st.rerun()
+    
+    st.markdown("---")
+    st.header("📊 History")
+    if st.session_state.query_history:
+        for i, q in enumerate(reversed(st.session_state.query_history[-8:])):
+            with st.expander(f"Q{len(st.session_state.query_history)-i}"):
+                st.text(q)
+    else:
+        st.info("No queries yet")
+    
+    st.markdown("---")
+    st.markdown("### 💡 Try These")
+    st.markdown("""
+**Simple:**
+- Show all departments  
+- List employees
+
+**Filtering:**
+- Employees in HR
+- Show Neha's salary
+
+**Aggregation:**
+- Total salary by department
+- Count employees per dept
+- Average salary
+
+**Complex:**
+- Top 3 highest paid
+- Employees with salary > 60000
+- Department with most employees
+
+**Multilingual:**
+- मुझे सभी कर्मचारी दिखाएं
+- Muéstrame empleados
+    """)
+
+# Language Selection
+language_options = {
+    "English (US)": "en-US", "Hindi": "hi-IN", "Spanish": "es-ES",
+    "French": "fr-FR", "German": "de-DE"
+}
+language = st.selectbox("🌍 Language", list(language_options.keys()))
+selected_lang_code = language_options[language]
+
+# Query Input
+st.markdown("---")
+st.markdown("### 🔍 Enter Your Query")
+
+tab1, tab2 = st.tabs(["💬 Text", "🎤 Voice"])
+
+with tab1:
+    text_query = st.text_area(
+        "Ask in natural language",
+        placeholder="Example: Show me total salary by department\nExample: Employees with salary greater than 60000",
+        height=100
+    )
+    text_button = st.button("🚀 Execute Text Query")
+
+with tab2:
+    col_a, col_b = st.columns([1, 1])
+    with col_a:
+        duration = st.slider("Duration (sec)", 3, 10, 5)
+        if st.button("🔴 Start Recording"):
+            audio_data = record_audio(duration)
+            if audio_data:
+                st.success("✅ Recording done!")
+                transcribed = transcribe_audio(audio_data, selected_lang_code)
+                st.session_state.recorded_text = transcribed
+                st.rerun()
+    
+    with col_b:
+        if st.button("🗑️ Clear"):
+            st.session_state.recorded_text = ""
+            st.rerun()
+    
+    if st.session_state.recorded_text:
+        if st.session_state.recorded_text.startswith("❌"):
+            st.error(st.session_state.recorded_text)
+        else:
+            st.success(f"📝 {st.session_state.recorded_text}")
+    
+    voice_query = st.text_input("Transcribed (editable)", 
+                                value=st.session_state.recorded_text)
+    voice_button = st.button("🎙️ Execute Voice Query", disabled=not voice_query)
+
+# Execute
+user_query = None
+if text_button and text_query:
+    user_query = text_query
+elif voice_button and voice_query:
+    user_query = voice_query
+
+if user_query:
+    st.session_state.query_history.append(user_query)
+    st.markdown("---")
+    st.info(f"🔄 **Processing:** {user_query}")
+    
+    with st.spinner("⚡ Running through Langflow pipeline..."):
+        response = call_langflow_api(user_query)
+        
+        if response:
+            st.markdown("### 📊 Results")
+            result_text, error = format_result(response)
+            
+            if error:
+                st.error(f"❌ {error}")
+                st.warning("""
+**Troubleshooting:**
+1. Did you upload the Excel in Langflow UI?
+2. Is the database created successfully?
+3. Try running the same query in Langflow first
+                """)
+            elif result_text:
+                # Success!
+                if "Found" in result_text and "rows:" in result_text:
+                    st.success("✅ Query executed successfully!")
+                    st.text(result_text)
+                elif "ERROR" in result_text:
+                    st.error(result_text)
+                else:
+                    st.success("✅ Success!")
+                    st.text(result_text)
+            
+            with st.expander("🔍 Raw Response"):
+                st.json(response)
+        else:
+            st.error("❌ No response - check if Langflow is running")
+
+# Footer
+st.markdown("---")
+st.markdown("""
+<div style='text-align: center; color: #666; padding: 1rem;'>
+    <p>🚀 Langflow + Streamlit | 🎤 Voice-Enabled | 🌍 Multilingual | 📊 Advanced SQL</p>
+    <p style='font-size: 0.9em; margin-top: 0.5rem;'>
+        ⚠️ <strong>Remember:</strong> Upload Excel in Langflow UI first!
+    </p>
+</div>
+""", unsafe_allow_html=True)
