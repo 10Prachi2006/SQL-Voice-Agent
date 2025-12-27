@@ -24,15 +24,20 @@
 
 ## 🏗️ Architecture
 
+<img width="1365" height="639" alt="Screenshot 2025-12-27 at 16-02-18 Langflow" src="https://github.com/user-attachments/assets/a04a4bb7-8969-47f8-94a6-5b4e5745e2aa" />
+
 ```
-User Voice/Text → Streamlit UI → Langflow API → Natural Language Processing
-                                        ↓
-                                   SQL Generation
-                                        ↓
-                                   Database Query
-                                        ↓
-                                   Results Display
-```
+## 📸 Screenshots
+
+
+### Voice Input Interface
+<img width="1365" height="624" alt="Screenshot 2025-12-27 at 16-02-49 Enterprise AI Voice-SQL Platform" src="https://github.com/user-attachments/assets/ede8efbb-f417-453a-a4dc-25d1ac6de855" />
+
+### Query Results
+<img width="1365" height="636" alt="Screenshot 2025-12-27 at 16-03-42 Enterprise AI Voice-SQL Platform" src="https://github.com/user-attachments/assets/723fda6f-760e-4701-ad39-e854398df5b4" />
+
+### Statistics Panel
+<img width="1365" height="634" alt="Screenshot 2025-12-27 at 16-03-19 Enterprise AI Voice-SQL Platform" src="https://github.com/user-attachments/assets/7770242c-8b1f-489b-b466-ecfc57d0d5cf" />
 
 ## 🚀 Quick Start
 
@@ -120,20 +125,6 @@ User Voice/Text → Streamlit UI → Langflow API → Natural Language Processin
 - 🇫🇷 Français (fr-FR)
 - 🇩🇪 Deutsch (de-DE)
 
-## 📁 Project Structure
-
-```
-voice-sql-assistant/
-│
-├── app5.py                    # Main Streamlit application
-├── Voice-SQL.json             # Langflow flow configuration
-├── README.md                  # This file
-├── requirements.txt           # Python dependencies
-└── screenshots/               # Demo screenshots
-    ├── dashboard.png
-    ├── voice-input.png
-    └── results.png
-```
 
 ## 🔧 Configuration
 
@@ -146,34 +137,7 @@ The Langflow flow consists of:
 - **SQL Database** - Executes SQL queries
 - **Chat Output** - Returns formatted results
 
-### Customization
 
-You can customize the application by:
-- Modifying the CSS in `app5.py` for different themes
-- Adding more example queries in the sidebar
-- Adjusting the recording duration
-- Changing the color scheme
-- Adding new language support
-
-## 🎨 Features in Detail
-
-### Dashboard Statistics
-- **Total Queries** - Count of all executed queries
-- **Successful Queries** - Number of successful executions
-- **Success Rate** - Percentage of successful queries
-- **Query History** - Last 8 queries with timestamps
-
-### Voice Recognition
-- Real-time voice recording with visual feedback
-- Multi-language speech recognition
-- Editable transcription for corrections
-- Recording pulse animation
-
-### Query Processing
-- Natural language understanding
-- SQL generation
-- Database execution
-- Formatted result display
 
 ## 🐛 Troubleshooting
 
@@ -240,11 +204,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact & Connect
 
-**Developer:** [Your Name]
+**Developer:** Prachi Yadav.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-profile)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yourusername)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your.email@example.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](starletprachi@gmail.com)
 
 ---
 
@@ -276,19 +240,6 @@ The voice recognition feature uses Google's Speech Recognition API, which requir
 
 ---
 
-## 📸 Screenshots
-
-### Dashboard Overview
-[Add screenshot: dashboard.png]
-
-### Voice Input Interface
-[Add screenshot: voice-input.png]
-
-### Query Results
-[Add screenshot: results.png]
-
-### Statistics Panel
-[Add screenshot: statistics.png]
 
 ---
 
@@ -298,8 +249,10 @@ The voice recognition feature uses Google's Speech Recognition API, which requir
 
 For questions, suggestions, or collaboration opportunities:
 
-**LinkedIn:** [Your LinkedIn Profile URL]
+**LinkedIn:** 
 
 *Let's build the future of data interaction together!*
 
 </div>
+
+Author: Prachi Yadav.
