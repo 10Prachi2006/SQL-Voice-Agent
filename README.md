@@ -20,17 +20,19 @@
 
 ## 🎥 Demo
 
-[Add your demo video or GIF here]
+(https://vimeo.com/1149629769?share=copy&fl=sv&fe=ci)
 
 ## 🏗️ Architecture
 
 <img width="1365" height="639" alt="Screenshot 2025-12-27 at 16-02-18 Langflow" src="https://github.com/user-attachments/assets/a04a4bb7-8969-47f8-94a6-5b4e5745e2aa" />
 
 ```
+
+```
 ## 📸 Screenshots
 
 
-### Voice Input Interface
+Voice Input Interface
 <img width="1365" height="624" alt="Screenshot 2025-12-27 at 16-02-49 Enterprise AI Voice-SQL Platform" src="https://github.com/user-attachments/assets/ede8efbb-f417-453a-a4dc-25d1ac6de855" />
 
 ### Query Results
