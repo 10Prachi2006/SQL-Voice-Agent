@@ -1,0 +1,1763 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt Template",
+            "id": "Prompt Template-BS85j",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "GoogleGenerativeAIModel-KP6qn",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-Prompt Template-BS85j{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-BS85jœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-GoogleGenerativeAIModel-KP6qn{œfieldNameœ:œinput_valueœ,œidœ:œGoogleGenerativeAIModel-KP6qnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt Template-BS85j",
+        "sourceHandle": "{œdataTypeœ:œPrompt Templateœ,œidœ:œPrompt Template-BS85jœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "GoogleGenerativeAIModel-KP6qn",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œGoogleGenerativeAIModel-KP6qnœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ExcelToDatabaseComponent",
+            "id": "ExcelToDatabaseComponent-HJuFZ",
+            "name": "db_path",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "db_path",
+            "id": "SQLExecutorComponent-fYUW4",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ExcelToDatabaseComponent-HJuFZ{œdataTypeœ:œExcelToDatabaseComponentœ,œidœ:œExcelToDatabaseComponent-HJuFZœ,œnameœ:œdb_pathœ,œoutput_typesœ:[œMessageœ]}-SQLExecutorComponent-fYUW4{œfieldNameœ:œdb_pathœ,œidœ:œSQLExecutorComponent-fYUW4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ExcelToDatabaseComponent-HJuFZ",
+        "sourceHandle": "{œdataTypeœ:œExcelToDatabaseComponentœ,œidœ:œExcelToDatabaseComponent-HJuFZœ,œnameœ:œdb_pathœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "SQLExecutorComponent-fYUW4",
+        "targetHandle": "{œfieldNameœ:œdb_pathœ,œidœ:œSQLExecutorComponent-fYUW4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ExcelToDatabaseComponent",
+            "id": "ExcelToDatabaseComponent-n26i1",
+            "name": "schema",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "schema",
+            "id": "Prompt Template-BS85j",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-ExcelToDatabaseComponent-n26i1{œdataTypeœ:œExcelToDatabaseComponentœ,œidœ:œExcelToDatabaseComponent-n26i1œ,œnameœ:œschemaœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-BS85j{œfieldNameœ:œschemaœ,œidœ:œPrompt Template-BS85jœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ExcelToDatabaseComponent-n26i1",
+        "sourceHandle": "{œdataTypeœ:œExcelToDatabaseComponentœ,œidœ:œExcelToDatabaseComponent-n26i1œ,œnameœ:œschemaœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-BS85j",
+        "targetHandle": "{œfieldNameœ:œschemaœ,œidœ:œPrompt Template-BS85jœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "GoogleGenerativeAIModel",
+            "id": "GoogleGenerativeAIModel-KP6qn",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm_output",
+            "id": "SQLCleanerComponent-hYbya",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-GoogleGenerativeAIModel-KP6qn{œdataTypeœ:œGoogleGenerativeAIModelœ,œidœ:œGoogleGenerativeAIModel-KP6qnœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-SQLCleanerComponent-hYbya{œfieldNameœ:œllm_outputœ,œidœ:œSQLCleanerComponent-hYbyaœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "GoogleGenerativeAIModel-KP6qn",
+        "sourceHandle": "{œdataTypeœ:œGoogleGenerativeAIModelœ,œidœ:œGoogleGenerativeAIModel-KP6qnœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "SQLCleanerComponent-hYbya",
+        "targetHandle": "{œfieldNameœ:œllm_outputœ,œidœ:œSQLCleanerComponent-hYbyaœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "SQLCleanerComponent",
+            "id": "SQLCleanerComponent-hYbya",
+            "name": "clean_sql",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "query",
+            "id": "SQLExecutorComponent-fYUW4",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "reactflow__edge-SQLCleanerComponent-hYbya{œdataTypeœ:œSQLCleanerComponentœ,œidœ:œSQLCleanerComponent-hYbyaœ,œnameœ:œclean_sqlœ,œoutput_typesœ:[œMessageœ]}-SQLExecutorComponent-fYUW4{œfieldNameœ:œqueryœ,œidœ:œSQLExecutorComponent-fYUW4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "SQLCleanerComponent-hYbya",
+        "sourceHandle": "{œdataTypeœ:œSQLCleanerComponentœ,œidœ:œSQLCleanerComponent-hYbyaœ,œnameœ:œclean_sqlœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "SQLExecutorComponent-fYUW4",
+        "targetHandle": "{œfieldNameœ:œqueryœ,œidœ:œSQLExecutorComponent-fYUW4œ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "ChatInput",
+            "id": "ChatInput-Kg2yT",
+            "name": "message",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "question",
+            "id": "Prompt Template-BS85j",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__ChatInput-Kg2yT{œdataTypeœ:œChatInputœ,œidœ:œChatInput-Kg2yTœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}-Prompt Template-BS85j{œfieldNameœ:œquestionœ,œidœ:œPrompt Template-BS85jœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "ChatInput-Kg2yT",
+        "sourceHandle": "{œdataTypeœ:œChatInputœ,œidœ:œChatInput-Kg2yTœ,œnameœ:œmessageœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "Prompt Template-BS85j",
+        "targetHandle": "{œfieldNameœ:œquestionœ,œidœ:œPrompt Template-BS85jœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "SQLExecutorComponent",
+            "id": "SQLExecutorComponent-fYUW4",
+            "name": "results",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "ChatOutput-YPVPf",
+            "inputTypes": [
+              "Data",
+              "DataFrame",
+              "Message"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__SQLExecutorComponent-fYUW4{œdataTypeœ:œSQLExecutorComponentœ,œidœ:œSQLExecutorComponent-fYUW4œ,œnameœ:œresultsœ,œoutput_typesœ:[œMessageœ]}-ChatOutput-YPVPf{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-YPVPfœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "SQLExecutorComponent-fYUW4",
+        "sourceHandle": "{œdataTypeœ:œSQLExecutorComponentœ,œidœ:œSQLExecutorComponent-fYUW4œ,œnameœ:œresultsœ,œoutput_typesœ:[œMessageœ]}",
+        "target": "ChatOutput-YPVPf",
+        "targetHandle": "{œfieldNameœ:œinput_valueœ,œidœ:œChatOutput-YPVPfœ,œinputTypesœ:[œDataœ,œDataFrameœ,œMessageœ],œtypeœ:œotherœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "ExcelToDatabaseComponent-n26i1",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Convert Excel file to SQLite database with detailed schema",
+            "display_name": "Excel to Database",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "excel_file",
+              "db_name"
+            ],
+            "frozen": false,
+            "icon": "database",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Database Path",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "convert",
+                "name": "db_path",
+                "options": null,
+                "required_inputs": null,
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Schema",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "get_schema",
+                "name": "schema",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.inputs import MessageTextInput, FileInput\r\nfrom langflow.template import Output\r\nfrom langflow.schema.message import Message\r\nimport pandas as pd\r\nimport sqlite3\r\nimport os\r\n\r\n\r\nclass ExcelToDatabaseComponent(Component):\r\n    display_name = \"Excel to Database\"\r\n    description = \"Convert Excel file to SQLite database with detailed schema\"\r\n    icon = \"database\"\r\n    \r\n    inputs = [\r\n        FileInput(\r\n            name=\"excel_file\",\r\n            display_name=\"Excel File\",\r\n            file_types=[\"xlsx\", \"xls\"],\r\n        ),\r\n        MessageTextInput(\r\n            name=\"db_name\",\r\n            display_name=\"Database Name\",\r\n            value=\"data.db\",\r\n        ),\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Database Path\", name=\"db_path\", method=\"convert\"),\r\n        Output(display_name=\"Schema\", name=\"schema\", method=\"get_schema\"),\r\n    ]\r\n    \r\n    def __init__(self, *args, **kwargs):\r\n        super().__init__(*args, **kwargs)\r\n        self._db_path = None\r\n        self._schema = None\r\n    \r\n    def convert(self) -> Message:\r\n        \"\"\"Convert Excel to SQLite\"\"\"\r\n        try:\r\n            # Create databases folder\r\n            os.makedirs(\"./databases\", exist_ok=True)\r\n            self._db_path = f\"./databases/{self.db_name}\"\r\n            \r\n            # Read Excel\r\n            excel_data = pd.read_excel(self.excel_file, sheet_name=None)\r\n            \r\n            # Create database\r\n            conn = sqlite3.connect(self._db_path)\r\n            \r\n            schema_info = \"=== DATABASE SCHEMA ===\\n\\n\"\r\n            \r\n            # Store table information for relationship detection\r\n            tables_info = {}\r\n            \r\n            # Convert sheets to tables\r\n            for sheet_name, df in excel_data.items():\r\n                table_name = sheet_name.replace(\" \", \"_\").lower()\r\n                df.columns = [col.replace(\" \", \"_\").lower() for col in df.columns]\r\n                \r\n                df.to_sql(table_name, conn, if_exists='replace', index=False)\r\n                \r\n                # Get column info with types\r\n                cursor = conn.cursor()\r\n                cursor.execute(f\"PRAGMA table_info({table_name})\")\r\n                columns_info = cursor.fetchall()\r\n                \r\n                # Store for relationship detection\r\n                tables_info[table_name] = {\r\n                    'columns': [col[1] for col in columns_info],\r\n                    'row_count': len(df)\r\n                }\r\n                \r\n                # Build detailed schema\r\n                schema_info += f\"TABLE: {table_name}\\n\"\r\n                schema_info += f\"  Row Count: {len(df)}\\n\"\r\n                schema_info += f\"  Columns:\\n\"\r\n                \r\n                for col in columns_info:\r\n                    col_name = col[1]\r\n                    col_type = col[2]\r\n                    \r\n                    # Get sample values\r\n                    cursor.execute(f\"SELECT DISTINCT {col_name} FROM {table_name} LIMIT 3\")\r\n                    samples = [str(row[0]) for row in cursor.fetchall()]\r\n                    sample_str = \", \".join(samples) if samples else \"no data\"\r\n                    \r\n                    schema_info += f\"    • {col_name} ({col_type})\\n\"\r\n                    schema_info += f\"      Sample values: {sample_str}\\n\"\r\n                \r\n                schema_info += \"\\n\"\r\n            \r\n            # Detect potential relationships\r\n            schema_info += \"=== RELATIONSHIPS ===\\n\"\r\n            relationships_found = False\r\n            \r\n            for table1, info1 in tables_info.items():\r\n                for table2, info2 in tables_info.items():\r\n                    if table1 >= table2:  # Avoid duplicates and self-joins\r\n                        continue\r\n                    \r\n                    # Look for common columns (potential foreign keys)\r\n                    common_cols = set(info1['columns']) & set(info2['columns'])\r\n                    \r\n                    for col in common_cols:\r\n                        if col.endswith('_id') or col == 'id':\r\n                            schema_info += f\"  {table1}.{col} ↔ {table2}.{col}\\n\"\r\n                            schema_info += f\"    JOIN: SELECT * FROM {table1} JOIN {table2} ON {table1}.{col} = {table2}.{col}\\n\"\r\n                            relationships_found = True\r\n            \r\n            if not relationships_found:\r\n                schema_info += \"  No obvious relationships detected\\n\"\r\n            \r\n            schema_info += \"\\n\"\r\n            \r\n            # Add query examples\r\n            schema_info += \"=== EXAMPLE QUERIES ===\\n\"\r\n            for table_name in tables_info.keys():\r\n                schema_info += f\"  • SELECT * FROM {table_name} LIMIT 10\\n\"\r\n                schema_info += f\"  • SELECT COUNT(*) FROM {table_name}\\n\"\r\n            \r\n            if len(tables_info) > 1:\r\n                # Example JOIN if relationships exist\r\n                table_list = list(tables_info.keys())\r\n                schema_info += f\"\\nFor joins between tables, use:\\n\"\r\n                schema_info += f\"  • SELECT * FROM {table_list[0]} JOIN {table_list[1]} ON [matching_column]\\n\"\r\n            \r\n            conn.close()\r\n            \r\n            self._schema = schema_info\r\n            self.status = f\"✅ Created database with {len(excel_data)} tables\"\r\n            \r\n            # Return the database path with sqlite:/// prefix for SQLAlchemy\r\n            return Message(text=f\"sqlite:///{self._db_path}\")\r\n            \r\n        except Exception as e:\r\n            error = f\"ERROR: {str(e)}\"\r\n            self.status = error\r\n            return Message(text=error)\r\n    \r\n    def get_schema(self) -> Message:\r\n        \"\"\"Get database schema\"\"\"\r\n        if not self._schema:\r\n            self.convert()\r\n        return Message(text=self._schema or \"No schema available\")"
+              },
+              "db_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Database Name",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "db_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "data.db"
+              },
+              "excel_file": {
+                "_input_type": "FileInput",
+                "advanced": false,
+                "display_name": "Excel File",
+                "dynamic": false,
+                "fileTypes": [
+                  "xlsx",
+                  "xls"
+                ],
+                "file_path": "dd4f48e2-0650-4185-a4db-ab5dc0a9673a/Sample-Data.xlsx",
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "excel_file",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": false,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "schema",
+          "showNode": true,
+          "type": "ExcelToDatabaseComponent"
+        },
+        "dragging": false,
+        "id": "ExcelToDatabaseComponent-n26i1",
+        "measured": {
+          "height": 309,
+          "width": 320
+        },
+        "position": {
+          "x": 424.375566235704,
+          "y": -248.2291369165528
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "SQLExecutorComponent-fYUW4",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Execute SQL queries on database",
+            "display_name": "SQL Executor",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "db_path",
+              "query"
+            ],
+            "frozen": false,
+            "icon": "play",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Results",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "execute",
+                "name": "results",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.inputs import MessageTextInput\r\nfrom langflow.template import Output\r\nfrom langflow.schema.message import Message\r\nimport sqlite3\r\nimport pandas as pd\r\n\r\n\r\nclass SQLExecutorComponent(Component):\r\n    display_name = \"SQL Executor\"\r\n    description = \"Execute SQL queries on database\"\r\n    icon = \"play\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"db_path\",\r\n            display_name=\"Database Path\",\r\n        ),\r\n        MessageTextInput(\r\n            name=\"query\",\r\n            display_name=\"SQL Query\",\r\n        ),\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Results\", name=\"results\", method=\"execute\"),\r\n    ]\r\n    \r\n    def execute(self) -> Message:\r\n        \"\"\"Execute SQL query\"\"\"\r\n        try:\r\n            # Clean the database path\r\n            db_path = self.db_path.strip()\r\n            \r\n            # Remove sqlite:/// prefix if present\r\n            if db_path.startswith(\"sqlite:///\"):\r\n                db_path = db_path.replace(\"sqlite:///\", \"\")\r\n            \r\n            # Clean the query\r\n            query = self.query.strip()\r\n            \r\n            # Remove any markdown code blocks\r\n            if query.startswith(\"```\"):\r\n                lines = query.split(\"\\n\")\r\n                query = \"\\n\".join(line for line in lines if not line.startswith(\"```\"))\r\n                query = query.strip()\r\n            \r\n            self.log(f\"Connecting to database: {db_path}\")\r\n            self.log(f\"Executing query: {query}\")\r\n            \r\n            # Connect to database\r\n            conn = sqlite3.connect(db_path)\r\n            \r\n            # Execute query\r\n            if query.upper().startswith('SELECT') or query.upper().startswith('WITH'):\r\n                df = pd.read_sql_query(query, conn)\r\n                \r\n                if df.empty:\r\n                    result = \"No results found\"\r\n                else:\r\n                    # Format results\r\n                    result = f\"✅ Found {len(df)} rows:\\n\\n\"\r\n                    \r\n                    # Show all columns and rows in a nice format\r\n                    if len(df) <= 20:\r\n                        # For small results, show everything\r\n                        result += df.to_string(index=False)\r\n                    else:\r\n                        # For large results, show first 20\r\n                        result += df.head(20).to_string(index=False)\r\n                        result += f\"\\n\\n... and {len(df) - 20} more rows\"\r\n                    \r\n                    # Add summary statistics if numeric columns exist\r\n                    numeric_cols = df.select_dtypes(include=['number']).columns\r\n                    if len(numeric_cols) > 0 and len(df) > 1:\r\n                        result += f\"\\n\\n📊 Summary:\\n\"\r\n                        for col in numeric_cols:\r\n                            result += f\"  {col}: \"\r\n                            result += f\"Sum={df[col].sum():.2f}, \"\r\n                            result += f\"Avg={df[col].mean():.2f}, \"\r\n                            result += f\"Min={df[col].min():.2f}, \"\r\n                            result += f\"Max={df[col].max():.2f}\\n\"\r\n            else:\r\n                # For INSERT, UPDATE, DELETE queries\r\n                cursor = conn.cursor()\r\n                cursor.execute(query)\r\n                conn.commit()\r\n                result = f\"✅ Query executed successfully. Rows affected: {cursor.rowcount}\"\r\n            \r\n            conn.close()\r\n            self.status = \"✅ Query executed successfully\"\r\n            \r\n            return Message(text=result)\r\n            \r\n        except sqlite3.Error as e:\r\n            error = f\"❌ Database Error: {str(e)}\\n\\nQuery: {query}\\nDatabase: {db_path}\"\r\n            self.status = error\r\n            self.log(error)\r\n            return Message(text=error)\r\n        except Exception as e:\r\n            error = f\"❌ Error: {str(e)}\\n\\nQuery: {query}\\nDatabase: {db_path}\"\r\n            self.status = error\r\n            self.log(error)\r\n            return Message(text=error)"
+              },
+              "db_path": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Database Path",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "db_path",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "query": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "SQL Query",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "query",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "SQLExecutorComponent"
+        },
+        "dragging": false,
+        "id": "SQLExecutorComponent-fYUW4",
+        "measured": {
+          "height": 288,
+          "width": 320
+        },
+        "position": {
+          "x": 2077.285606074718,
+          "y": -399.8786425943024
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatOutput-YPVPf",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Display a chat message in the Playground.",
+            "display_name": "Chat Output",
+            "documentation": "https://docs.langflow.org/components-io#chat-output",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "data_template"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Output Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from collections.abc import Generator\nfrom typing import Any\n\nimport orjson\nfrom fastapi.encoders import jsonable_encoder\n\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.helpers.data import safe_convert\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, HandleInput, MessageTextInput\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.message import Message\nfrom langflow.schema.properties import Source\nfrom langflow.template.field.base import Output\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_AI,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatOutput(ChatComponent):\n    display_name = \"Chat Output\"\n    description = \"Display a chat message in the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-output\"\n    icon = \"MessagesSquare\"\n    name = \"ChatOutput\"\n    minimized = True\n\n    inputs = [\n        HandleInput(\n            name=\"input_value\",\n            display_name=\"Inputs\",\n            info=\"Message to be passed as output.\",\n            input_types=[\"Data\", \"DataFrame\", \"Message\"],\n            required=True,\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_AI,\n            advanced=True,\n            info=\"Type of sender.\",\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_AI,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"data_template\",\n            display_name=\"Data Template\",\n            value=\"{text}\",\n            advanced=True,\n            info=\"Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.\",\n        ),\n    ]\n    outputs = [\n        Output(\n            display_name=\"Output Message\",\n            name=\"message\",\n            method=\"message_response\",\n        ),\n    ]\n\n    def _build_source(self, id_: str | None, display_name: str | None, source: str | None) -> Source:\n        source_dict = {}\n        if id_:\n            source_dict[\"id\"] = id_\n        if display_name:\n            source_dict[\"display_name\"] = display_name\n        if source:\n            # Handle case where source is a ChatOpenAI object\n            if hasattr(source, \"model_name\"):\n                source_dict[\"source\"] = source.model_name\n            elif hasattr(source, \"model\"):\n                source_dict[\"source\"] = str(source.model)\n            else:\n                source_dict[\"source\"] = str(source)\n        return Source(**source_dict)\n\n    async def message_response(self) -> Message:\n        # First convert the input to string if needed\n        text = self.convert_to_string()\n\n        # Get source properties\n        source, _icon, display_name, source_id = self.get_properties_from_source_component()\n\n        # Create or use existing Message object\n        if isinstance(self.input_value, Message):\n            message = self.input_value\n            # Update message properties\n            message.text = text\n        else:\n            message = Message(text=text)\n\n        # Set message properties\n        message.sender = self.sender\n        message.sender_name = self.sender_name\n        message.session_id = self.session_id\n        message.flow_id = self.graph.flow_id if hasattr(self, \"graph\") else None\n        message.properties.source = self._build_source(source_id, display_name, source)\n\n        # Store message if needed\n        if self.session_id and self.should_store_message:\n            stored_message = await self.send_message(message)\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n\n    def _serialize_data(self, data: Data) -> str:\n        \"\"\"Serialize Data object to JSON string.\"\"\"\n        # Convert data.data to JSON-serializable format\n        serializable_data = jsonable_encoder(data.data)\n        # Serialize with orjson, enabling pretty printing with indentation\n        json_bytes = orjson.dumps(serializable_data, option=orjson.OPT_INDENT_2)\n        # Convert bytes to string and wrap in Markdown code blocks\n        return \"```json\\n\" + json_bytes.decode(\"utf-8\") + \"\\n```\"\n\n    def _validate_input(self) -> None:\n        \"\"\"Validate the input data and raise ValueError if invalid.\"\"\"\n        if self.input_value is None:\n            msg = \"Input data cannot be None\"\n            raise ValueError(msg)\n        if isinstance(self.input_value, list) and not all(\n            isinstance(item, Message | Data | DataFrame | str) for item in self.input_value\n        ):\n            invalid_types = [\n                type(item).__name__\n                for item in self.input_value\n                if not isinstance(item, Message | Data | DataFrame | str)\n            ]\n            msg = f\"Expected Data or DataFrame or Message or str, got {invalid_types}\"\n            raise TypeError(msg)\n        if not isinstance(\n            self.input_value,\n            Message | Data | DataFrame | str | list | Generator | type(None),\n        ):\n            type_name = type(self.input_value).__name__\n            msg = f\"Expected Data or DataFrame or Message or str, Generator or None, got {type_name}\"\n            raise TypeError(msg)\n\n    def convert_to_string(self) -> str | Generator[Any, None, None]:\n        \"\"\"Convert input data to string with proper error handling.\"\"\"\n        self._validate_input()\n        if isinstance(self.input_value, list):\n            clean_data: bool = getattr(self, \"clean_data\", False)\n            return \"\\n\".join([safe_convert(item, clean_data=clean_data) for item in self.input_value])\n        if isinstance(self.input_value, Generator):\n            return self.input_value\n        return safe_convert(self.input_value)\n"
+              },
+              "data_template": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Data Template",
+                "dynamic": false,
+                "info": "Template to convert Data to Text. If left empty, it will be dynamically set to the Data's text key.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "data_template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "{text}"
+              },
+              "input_value": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Inputs",
+                "dynamic": false,
+                "info": "Message to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "DataFrame",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "input_value",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Machine"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "AI"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "ChatOutput"
+        },
+        "dragging": false,
+        "id": "ChatOutput-YPVPf",
+        "measured": {
+          "height": 249,
+          "width": 320
+        },
+        "position": {
+          "x": 2076.014635865281,
+          "y": 88.05527644010618
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt Template-BS85j",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "schema",
+                "question"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt Template",
+            "documentation": "https://docs.langflow.org/components-prompts",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "braces",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "build_prompt",
+                "name": "prompt",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": 0,
+            "replacement": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom.custom_component.component import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt Template\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    documentation: str = \"https://docs.langflow.org/components-prompts\"\n    icon = \"braces\"\n    trace_type = \"prompt\"\n    name = \"Prompt Template\"\n    priority = 0  # Set priority to 0 to make it appear first\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "question": {
+                "advanced": false,
+                "display_name": "question",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "question",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "schema": {
+                "advanced": false,
+                "display_name": "schema",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "schema",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "You are an expert SQL database analyst. Convert natural language questions into precise SQL queries for SQLite.\n\n{schema}\n\nUSER QUESTION: {question}\n\nCRITICAL RULES:\n1. ALWAYS use the run_sql_query tool to execute queries\n2. Use proper SQLite syntax\n3. Table and column names are case-insensitive - use lowercase\n4. For text searches, always use LIKE with % wildcards: WHERE name LIKE '%John%'\n5. For JOINs, explicitly specify the join condition\n6. For aggregations, use GROUP BY with aggregate functions (COUNT, SUM, AVG, MAX, MIN)\n7. Always include relevant columns in SELECT when using GROUP BY\n\nQUERY PATTERNS:\n\n1. SIMPLE SELECT:\n   User: \"Show all customers\"\n   SQL: SELECT * FROM customers\n\n2. FILTERING:\n   User: \"Find customers named John\"\n   SQL: SELECT * FROM customers WHERE name LIKE '%John%'\n\n3. COUNTING:\n   User: \"How many orders?\"\n   SQL: SELECT COUNT(*) as total_orders FROM orders\n\n4. JOINS:\n   User: \"Show customers and their orders\"\n   SQL: SELECT c.*, o.* FROM customers c JOIN orders o ON c.id = o.customer_id\n\n5. AGGREGATION WITH GROUP BY:\n   User: \"Total sales per customer\"\n   SQL: SELECT customer_id, SUM(amount) as total_sales FROM orders GROUP BY customer_id\n\n6. COMPLEX JOINS + FILTERING:\n   User: \"Show orders from customers in New York\"\n   SQL: SELECT o.* FROM orders o JOIN customers c ON o.customer_id = c.id WHERE c.city LIKE '%New York%'\n\n7. MULTIPLE CONDITIONS:\n   User: \"Customers aged 25-35 in Chicago\"\n   SQL: SELECT * FROM customers WHERE age BETWEEN 25 AND 35 AND city LIKE '%Chicago%'\n\n8. ORDERING:\n   User: \"Top 5 biggest orders\"\n   SQL: SELECT * FROM orders ORDER BY amount DESC LIMIT 5\n\nMANDATORY EXECUTION:\n- You MUST call run_sql_query tool for EVERY question\n- DO NOT just describe the query - EXECUTE IT\n- Your first action must be calling the tool\n- Only explain AFTER you have the results\n- If you don't call the tool, you have failed the task\n\nRESPONSE FORMAT:\n1. Call run_sql_query with the SQL (MANDATORY)\n2. Show the results returned\n3. Briefly explain what the data shows"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt Template"
+        },
+        "dragging": false,
+        "id": "Prompt Template-BS85j",
+        "measured": {
+          "height": 450,
+          "width": 320
+        },
+        "position": {
+          "x": 860.1014654392035,
+          "y": -301.482377684977
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ExcelToDatabaseComponent-HJuFZ",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Convert Excel file to SQLite database with detailed schema",
+            "display_name": "Excel to Database",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "excel_file",
+              "db_name"
+            ],
+            "frozen": false,
+            "icon": "database",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Database Path",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "convert",
+                "name": "db_path",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Schema",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "get_schema",
+                "name": "schema",
+                "options": null,
+                "required_inputs": null,
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.inputs import MessageTextInput, FileInput\r\nfrom langflow.template import Output\r\nfrom langflow.schema.message import Message\r\nimport pandas as pd\r\nimport sqlite3\r\nimport os\r\n\r\n\r\nclass ExcelToDatabaseComponent(Component):\r\n    display_name = \"Excel to Database\"\r\n    description = \"Convert Excel file to SQLite database with detailed schema\"\r\n    icon = \"database\"\r\n    \r\n    inputs = [\r\n        FileInput(\r\n            name=\"excel_file\",\r\n            display_name=\"Excel File\",\r\n            file_types=[\"xlsx\", \"xls\"],\r\n        ),\r\n        MessageTextInput(\r\n            name=\"db_name\",\r\n            display_name=\"Database Name\",\r\n            value=\"data.db\",\r\n        ),\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Database Path\", name=\"db_path\", method=\"convert\"),\r\n        Output(display_name=\"Schema\", name=\"schema\", method=\"get_schema\"),\r\n    ]\r\n    \r\n    def __init__(self, *args, **kwargs):\r\n        super().__init__(*args, **kwargs)\r\n        self._db_path = None\r\n        self._schema = None\r\n    \r\n    def convert(self) -> Message:\r\n        \"\"\"Convert Excel to SQLite\"\"\"\r\n        try:\r\n            # Create databases folder\r\n            os.makedirs(\"./databases\", exist_ok=True)\r\n            self._db_path = f\"./databases/{self.db_name}\"\r\n            \r\n            # Read Excel\r\n            excel_data = pd.read_excel(self.excel_file, sheet_name=None)\r\n            \r\n            # Create database\r\n            conn = sqlite3.connect(self._db_path)\r\n            \r\n            schema_info = \"=== DATABASE SCHEMA ===\\n\\n\"\r\n            \r\n            # Store table information for relationship detection\r\n            tables_info = {}\r\n            \r\n            # Convert sheets to tables\r\n            for sheet_name, df in excel_data.items():\r\n                table_name = sheet_name.replace(\" \", \"_\").lower()\r\n                df.columns = [col.replace(\" \", \"_\").lower() for col in df.columns]\r\n                \r\n                df.to_sql(table_name, conn, if_exists='replace', index=False)\r\n                \r\n                # Get column info with types\r\n                cursor = conn.cursor()\r\n                cursor.execute(f\"PRAGMA table_info({table_name})\")\r\n                columns_info = cursor.fetchall()\r\n                \r\n                # Store for relationship detection\r\n                tables_info[table_name] = {\r\n                    'columns': [col[1] for col in columns_info],\r\n                    'row_count': len(df)\r\n                }\r\n                \r\n                # Build detailed schema\r\n                schema_info += f\"TABLE: {table_name}\\n\"\r\n                schema_info += f\"  Row Count: {len(df)}\\n\"\r\n                schema_info += f\"  Columns:\\n\"\r\n                \r\n                for col in columns_info:\r\n                    col_name = col[1]\r\n                    col_type = col[2]\r\n                    \r\n                    # Get sample values\r\n                    cursor.execute(f\"SELECT DISTINCT {col_name} FROM {table_name} LIMIT 3\")\r\n                    samples = [str(row[0]) for row in cursor.fetchall()]\r\n                    sample_str = \", \".join(samples) if samples else \"no data\"\r\n                    \r\n                    schema_info += f\"    • {col_name} ({col_type})\\n\"\r\n                    schema_info += f\"      Sample values: {sample_str}\\n\"\r\n                \r\n                schema_info += \"\\n\"\r\n            \r\n            # Detect potential relationships\r\n            schema_info += \"=== RELATIONSHIPS ===\\n\"\r\n            relationships_found = False\r\n            \r\n            for table1, info1 in tables_info.items():\r\n                for table2, info2 in tables_info.items():\r\n                    if table1 >= table2:  # Avoid duplicates and self-joins\r\n                        continue\r\n                    \r\n                    # Look for common columns (potential foreign keys)\r\n                    common_cols = set(info1['columns']) & set(info2['columns'])\r\n                    \r\n                    for col in common_cols:\r\n                        if col.endswith('_id') or col == 'id':\r\n                            schema_info += f\"  {table1}.{col} ↔ {table2}.{col}\\n\"\r\n                            schema_info += f\"    JOIN: SELECT * FROM {table1} JOIN {table2} ON {table1}.{col} = {table2}.{col}\\n\"\r\n                            relationships_found = True\r\n            \r\n            if not relationships_found:\r\n                schema_info += \"  No obvious relationships detected\\n\"\r\n            \r\n            schema_info += \"\\n\"\r\n            \r\n            # Add query examples\r\n            schema_info += \"=== EXAMPLE QUERIES ===\\n\"\r\n            for table_name in tables_info.keys():\r\n                schema_info += f\"  • SELECT * FROM {table_name} LIMIT 10\\n\"\r\n                schema_info += f\"  • SELECT COUNT(*) FROM {table_name}\\n\"\r\n            \r\n            if len(tables_info) > 1:\r\n                # Example JOIN if relationships exist\r\n                table_list = list(tables_info.keys())\r\n                schema_info += f\"\\nFor joins between tables, use:\\n\"\r\n                schema_info += f\"  • SELECT * FROM {table_list[0]} JOIN {table_list[1]} ON [matching_column]\\n\"\r\n            \r\n            conn.close()\r\n            \r\n            self._schema = schema_info\r\n            self.status = f\"✅ Created database with {len(excel_data)} tables\"\r\n            \r\n            # Return the database path with sqlite:/// prefix for SQLAlchemy\r\n            return Message(text=f\"sqlite:///{self._db_path}\")\r\n            \r\n        except Exception as e:\r\n            error = f\"ERROR: {str(e)}\"\r\n            self.status = error\r\n            return Message(text=error)\r\n    \r\n    def get_schema(self) -> Message:\r\n        \"\"\"Get database schema\"\"\"\r\n        if not self._schema:\r\n            self.convert()\r\n        return Message(text=self._schema or \"No schema available\")"
+              },
+              "db_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Database Name",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "db_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "data.db"
+              },
+              "excel_file": {
+                "_input_type": "FileInput",
+                "advanced": false,
+                "display_name": "Excel File",
+                "dynamic": false,
+                "fileTypes": [
+                  "xlsx",
+                  "xls"
+                ],
+                "file_path": "dd4f48e2-0650-4185-a4db-ab5dc0a9673a/Sample-Data.xlsx",
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "excel_file",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": false,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "db_path",
+          "showNode": true,
+          "type": "ExcelToDatabaseComponent"
+        },
+        "dragging": false,
+        "id": "ExcelToDatabaseComponent-HJuFZ",
+        "measured": {
+          "height": 309,
+          "width": 320
+        },
+        "position": {
+          "x": 1651.4931626274324,
+          "y": -513.5956254716407
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "GoogleGenerativeAIModel-KP6qn",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "category": "google",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using Google Generative AI.",
+            "display_name": "Google Generative AI",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "max_output_tokens",
+              "model_name",
+              "api_key",
+              "top_p",
+              "temperature",
+              "n",
+              "top_k",
+              "tool_model_enabled"
+            ],
+            "frozen": false,
+            "icon": "GoogleGenerativeAI",
+            "key": "GoogleGenerativeAIModel",
+            "last_updated": "2025-12-27T09:28:08.882Z",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {
+              "keywords": [
+                "model",
+                "llm",
+                "language model",
+                "large language model"
+              ]
+            },
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Model Response",
+                "group_outputs": false,
+                "method": "text_response",
+                "name": "text_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "group_outputs": false,
+                "method": "build_model",
+                "name": "model_output",
+                "options": null,
+                "required_inputs": null,
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.011066616087074883,
+            "template": {
+              "_frontend_node_flow_id": {
+                "value": "f2eec69f-32f1-4a60-b8c0-f63eda95296a"
+              },
+              "_frontend_node_folder_id": {
+                "value": "a90c0c3f-fa78-4366-ba0d-d1ccc6fcfb1e"
+              },
+              "_type": "Component",
+              "api_key": {
+                "_input_type": "SecretStrInput",
+                "advanced": false,
+                "display_name": "Google API Key",
+                "dynamic": false,
+                "info": "The Google API Key to use for the Google Generative AI.",
+                "input_types": [],
+                "load_from_db": false,
+                "name": "api_key",
+                "password": true,
+                "placeholder": "",
+                "real_time_refresh": true,
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from typing import Any\n\nimport requests\nfrom pydantic.v1 import SecretStr\n\nfrom langflow.base.models.google_generative_ai_constants import GOOGLE_GENERATIVE_AI_MODELS\nfrom langflow.base.models.model import LCModelComponent\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs.inputs import BoolInput, DropdownInput, FloatInput, IntInput, SecretStrInput, SliderInput\nfrom langflow.logging.logger import logger\nfrom langflow.schema.dotdict import dotdict\n\n\nclass GoogleGenerativeAIComponent(LCModelComponent):\n    display_name = \"Google Generative AI\"\n    description = \"Generate text using Google Generative AI.\"\n    icon = \"GoogleGenerativeAI\"\n    name = \"GoogleGenerativeAIModel\"\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        IntInput(\n            name=\"max_output_tokens\", display_name=\"Max Output Tokens\", info=\"The maximum number of tokens to generate.\"\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model\",\n            info=\"The name of the model to use.\",\n            options=GOOGLE_GENERATIVE_AI_MODELS,\n            value=\"gemini-1.5-pro\",\n            refresh_button=True,\n            combobox=True,\n        ),\n        SecretStrInput(\n            name=\"api_key\",\n            display_name=\"Google API Key\",\n            info=\"The Google API Key to use for the Google Generative AI.\",\n            required=True,\n            real_time_refresh=True,\n        ),\n        FloatInput(\n            name=\"top_p\",\n            display_name=\"Top P\",\n            info=\"The maximum cumulative probability of tokens to consider when sampling.\",\n            advanced=True,\n        ),\n        SliderInput(\n            name=\"temperature\",\n            display_name=\"Temperature\",\n            value=0.1,\n            range_spec=RangeSpec(min=0, max=1, step=0.01),\n            info=\"Controls randomness. Lower values are more deterministic, higher values are more creative.\",\n        ),\n        IntInput(\n            name=\"n\",\n            display_name=\"N\",\n            info=\"Number of chat completions to generate for each prompt. \"\n            \"Note that the API may not return the full n completions if duplicates are generated.\",\n            advanced=True,\n        ),\n        IntInput(\n            name=\"top_k\",\n            display_name=\"Top K\",\n            info=\"Decode using top-k sampling: consider the set of top_k most probable tokens. Must be positive.\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"tool_model_enabled\",\n            display_name=\"Tool Model Enabled\",\n            info=\"Whether to use the tool model.\",\n            value=False,\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        try:\n            from langchain_google_genai import ChatGoogleGenerativeAI\n        except ImportError as e:\n            msg = \"The 'langchain_google_genai' package is required to use the Google Generative AI model.\"\n            raise ImportError(msg) from e\n\n        google_api_key = self.api_key\n        model = self.model_name\n        max_output_tokens = self.max_output_tokens\n        temperature = self.temperature\n        top_k = self.top_k\n        top_p = self.top_p\n        n = self.n\n\n        return ChatGoogleGenerativeAI(\n            model=model,\n            max_output_tokens=max_output_tokens or None,\n            temperature=temperature,\n            top_k=top_k or None,\n            top_p=top_p or None,\n            n=n or 1,\n            google_api_key=SecretStr(google_api_key).get_secret_value(),\n        )\n\n    def get_models(self, *, tool_model_enabled: bool | None = None) -> list[str]:\n        try:\n            import google.generativeai as genai\n\n            genai.configure(api_key=self.api_key)\n            model_ids = [\n                model.name.replace(\"models/\", \"\")\n                for model in genai.list_models()\n                if \"generateContent\" in model.supported_generation_methods\n            ]\n            model_ids.sort(reverse=True)\n        except (ImportError, ValueError) as e:\n            logger.exception(f\"Error getting model names: {e}\")\n            model_ids = GOOGLE_GENERATIVE_AI_MODELS\n        if tool_model_enabled:\n            try:\n                from langchain_google_genai.chat_models import ChatGoogleGenerativeAI\n            except ImportError as e:\n                msg = \"langchain_google_genai is not installed.\"\n                raise ImportError(msg) from e\n            for model in model_ids:\n                model_with_tool = ChatGoogleGenerativeAI(\n                    model=self.model_name,\n                    google_api_key=self.api_key,\n                )\n                if not self.supports_tool_calling(model_with_tool):\n                    model_ids.remove(model)\n        return model_ids\n\n    def update_build_config(self, build_config: dotdict, field_value: Any, field_name: str | None = None):\n        if field_name in {\"base_url\", \"model_name\", \"tool_model_enabled\", \"api_key\"} and field_value:\n            try:\n                if len(self.api_key) == 0:\n                    ids = GOOGLE_GENERATIVE_AI_MODELS\n                else:\n                    try:\n                        ids = self.get_models(tool_model_enabled=self.tool_model_enabled)\n                    except (ImportError, ValueError, requests.exceptions.RequestException) as e:\n                        logger.exception(f\"Error getting model names: {e}\")\n                        ids = GOOGLE_GENERATIVE_AI_MODELS\n                build_config.setdefault(\"model_name\", {})\n                build_config[\"model_name\"][\"options\"] = ids\n                build_config[\"model_name\"].setdefault(\"value\", ids[0])\n            except Exception as e:\n                msg = f\"Error getting model names: {e}\"\n                raise ValueError(msg) from e\n        return build_config\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "is_refresh": false,
+              "max_output_tokens": {
+                "_input_type": "IntInput",
+                "advanced": false,
+                "display_name": "Max Output Tokens",
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_output_tokens",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": true,
+                "dialog_inputs": {},
+                "display_name": "Model",
+                "dynamic": false,
+                "external_options": {},
+                "info": "The name of the model to use.",
+                "name": "model_name",
+                "options": [
+                  "gemma-3n-e4b-it",
+                  "gemma-3-4b-it",
+                  "gemma-3-1b-it",
+                  "gemini-robotics-er-1.5-preview",
+                  "gemini-flash-lite-latest",
+                  "gemini-exp-1206",
+                  "gemini-3-pro-image-preview",
+                  "gemini-2.5-pro-preview-tts",
+                  "gemini-2.5-flash-preview-tts",
+                  "gemini-2.5-flash-lite-preview-09-2025",
+                  "gemini-2.5-flash-image-preview",
+                  "gemini-2.5-flash",
+                  "gemini-2.0-flash-lite-preview-02-05",
+                  "gemini-2.0-flash-lite-001",
+                  "gemini-2.0-flash-exp-image-generation",
+                  "gemini-2.0-flash-001",
+                  "deep-research-pro-preview-12-2025"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "refresh_button": true,
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "gemini-2.5-flash"
+              },
+              "n": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "N",
+                "dynamic": false,
+                "info": "Number of chat completions to generate for each prompt. Note that the API may not return the full n completions if duplicates are generated.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "n",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "You are a SQL query generator. Generate ONLY valid SQL queries for SQLite.\n\nDATABASE SCHEMA:\n{schema}\n\nUSER QUESTION: {question}\n\nRULES:\n1. Return ONLY the SQL query, nothing else\n2. No explanations, no markdown, no comments\n3. Use lowercase for table/column names\n4. Use LIKE '%text%' for text searches\n5. For JOINs, use proper ON conditions\n6. For aggregations, use GROUP BY\n\nEXAMPLES:\nQuestion: \"Show all customers\"\nSQL: SELECT * FROM customers LIMIT 10\n\nQuestion: \"Customers from New York\"  \nSQL: SELECT * FROM customers WHERE city LIKE '%New York%'\n\nQuestion: \"Total per customer\"\nSQL: SELECT c.name, SUM(o.amount) as total FROM customers c JOIN orders o ON c.id = o.customer_id GROUP BY c.id, c.name\n\nNow generate SQL for: {question}\n\nSQL:"
+              },
+              "temperature": {
+                "_input_type": "SliderInput",
+                "advanced": false,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "Controls randomness. Lower values are more deterministic, higher values are more creative.",
+                "max_label": "",
+                "max_label_icon": "",
+                "min_label": "",
+                "min_label_icon": "",
+                "name": "temperature",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 1,
+                  "min": 0,
+                  "step": 0.01,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "slider_buttons": false,
+                "slider_buttons_options": [],
+                "slider_input": false,
+                "title_case": false,
+                "tool_mode": false,
+                "type": "slider",
+                "value": 0.1
+              },
+              "tool_model_enabled": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Tool Model Enabled",
+                "dynamic": false,
+                "info": "Whether to use the tool model.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "tool_model_enabled",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "top_k": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Top K",
+                "dynamic": false,
+                "info": "Decode using top-k sampling: consider the set of top_k most probable tokens. Must be positive.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "top_k",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "top_p": {
+                "_input_type": "FloatInput",
+                "advanced": true,
+                "display_name": "Top P",
+                "dynamic": false,
+                "info": "The maximum cumulative probability of tokens to consider when sampling.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "top_p",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "selected_output": "text_output",
+          "showNode": true,
+          "type": "GoogleGenerativeAIModel"
+        },
+        "dragging": false,
+        "id": "GoogleGenerativeAIModel-KP6qn",
+        "measured": {
+          "height": 667,
+          "width": 320
+        },
+        "position": {
+          "x": 1282.1264527911014,
+          "y": -381.7804910122569
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "SQLCleanerComponent-hYbya",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Extract and clean SQL queries from LLM output",
+            "display_name": "SQL Query Cleaner",
+            "documentation": "",
+            "edited": true,
+            "field_order": [
+              "llm_output"
+            ],
+            "frozen": false,
+            "icon": "filter",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Clean SQL",
+                "group_outputs": false,
+                "hidden": null,
+                "method": "clean",
+                "name": "clean_sql",
+                "options": null,
+                "required_inputs": null,
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.custom import Component\r\nfrom langflow.inputs import MessageTextInput\r\nfrom langflow.template import Output\r\nfrom langflow.schema.message import Message\r\nimport re\r\n\r\n\r\nclass SQLCleanerComponent(Component):\r\n    display_name = \"SQL Query Cleaner\"\r\n    description = \"Extract and clean SQL queries from LLM output\"\r\n    icon = \"filter\"\r\n    \r\n    inputs = [\r\n        MessageTextInput(\r\n            name=\"llm_output\",\r\n            display_name=\"LLM Output\",\r\n            info=\"Raw output from language model that may contain SQL\",\r\n        ),\r\n    ]\r\n    \r\n    outputs = [\r\n        Output(display_name=\"Clean SQL\", name=\"clean_sql\", method=\"clean\"),\r\n    ]\r\n    \r\n    def clean(self) -> Message:\r\n        \"\"\"Extract and clean SQL query from LLM output\"\"\"\r\n        try:\r\n            text = self.llm_output.strip()\r\n            \r\n            # Remove markdown code blocks\r\n            text = re.sub(r'```sql\\s*', '', text, flags=re.IGNORECASE)\r\n            text = re.sub(r'```\\s*', '', text)\r\n            \r\n            # Remove common prefixes\r\n            prefixes = [\r\n                'SQL:',\r\n                'Query:',\r\n                'Here is the SQL:',\r\n                'The SQL query is:',\r\n                'SQL Query:',\r\n            ]\r\n            for prefix in prefixes:\r\n                if text.upper().startswith(prefix.upper()):\r\n                    text = text[len(prefix):].strip()\r\n            \r\n            # Extract SQL statement (starts with SELECT, INSERT, UPDATE, DELETE, CREATE, etc.)\r\n            sql_keywords = ['SELECT', 'INSERT', 'UPDATE', 'DELETE', 'CREATE', 'ALTER', 'DROP', 'WITH']\r\n            \r\n            for keyword in sql_keywords:\r\n                pattern = f'({keyword}.*?)(?:;|$)'\r\n                match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)\r\n                if match:\r\n                    sql = match.group(1).strip()\r\n                    # Remove any trailing explanation\r\n                    sql = re.split(r'\\n\\n', sql)[0]\r\n                    self.status = f\"✅ Extracted {keyword} query\"\r\n                    return Message(text=sql)\r\n            \r\n            # If no keyword found, assume the entire text is SQL\r\n            self.status = \"⚠️ No SQL keyword found, returning as-is\"\r\n            return Message(text=text)\r\n            \r\n        except Exception as e:\r\n            error = f\"Error cleaning SQL: {str(e)}\"\r\n            self.status = error\r\n            return Message(text=self.llm_output)  # Return original on error"
+              },
+              "llm_output": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "LLM Output",
+                "dynamic": false,
+                "info": "Raw output from language model that may contain SQL",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "llm_output",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "SQLCleanerComponent"
+        },
+        "dragging": false,
+        "id": "SQLCleanerComponent-hYbya",
+        "measured": {
+          "height": 205,
+          "width": 320
+        },
+        "position": {
+          "x": 1678.1739011468005,
+          "y": -73.574379786975
+        },
+        "selected": true,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "ChatInput-Kg2yT",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Get chat inputs from the Playground.",
+            "display_name": "Chat Input",
+            "documentation": "https://docs.langflow.org/components-io#chat-input",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "should_store_message",
+              "sender",
+              "sender_name",
+              "session_id",
+              "files"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "lf_version": "1.6.5",
+            "metadata": {},
+            "minimized": true,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Chat Message",
+                "group_outputs": false,
+                "method": "message_response",
+                "name": "message",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.data.utils import IMG_FILE_TYPES, TEXT_FILE_TYPES\nfrom langflow.base.io.chat import ChatComponent\nfrom langflow.inputs.inputs import BoolInput\nfrom langflow.io import (\n    DropdownInput,\n    FileInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n)\nfrom langflow.schema.message import Message\nfrom langflow.utils.constants import (\n    MESSAGE_SENDER_AI,\n    MESSAGE_SENDER_NAME_USER,\n    MESSAGE_SENDER_USER,\n)\n\n\nclass ChatInput(ChatComponent):\n    display_name = \"Chat Input\"\n    description = \"Get chat inputs from the Playground.\"\n    documentation: str = \"https://docs.langflow.org/components-io#chat-input\"\n    icon = \"MessagesSquare\"\n    name = \"ChatInput\"\n    minimized = True\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Input Text\",\n            value=\"\",\n            info=\"Message to be passed as input.\",\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"should_store_message\",\n            display_name=\"Store Messages\",\n            info=\"Store the message in the history.\",\n            value=True,\n            advanced=True,\n        ),\n        DropdownInput(\n            name=\"sender\",\n            display_name=\"Sender Type\",\n            options=[MESSAGE_SENDER_AI, MESSAGE_SENDER_USER],\n            value=MESSAGE_SENDER_USER,\n            info=\"Type of sender.\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"sender_name\",\n            display_name=\"Sender Name\",\n            info=\"Name of the sender.\",\n            value=MESSAGE_SENDER_NAME_USER,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"session_id\",\n            display_name=\"Session ID\",\n            info=\"The session ID of the chat. If empty, the current session ID parameter will be used.\",\n            advanced=True,\n        ),\n        FileInput(\n            name=\"files\",\n            display_name=\"Files\",\n            file_types=TEXT_FILE_TYPES + IMG_FILE_TYPES,\n            info=\"Files to be sent with the message.\",\n            advanced=True,\n            is_list=True,\n            temp_file=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Chat Message\", name=\"message\", method=\"message_response\"),\n    ]\n\n    async def message_response(self) -> Message:\n        # Ensure files is a list and filter out empty/None values\n        files = self.files if self.files else []\n        if files and not isinstance(files, list):\n            files = [files]\n        files = [f for f in files if f is not None and f != \"\"]\n\n        message = await Message.create(\n            text=self.input_value,\n            sender=self.sender,\n            sender_name=self.sender_name,\n            session_id=self.session_id,\n            files=files,\n        )\n        if self.session_id and isinstance(message, Message) and self.should_store_message:\n            stored_message = await self.send_message(\n                message,\n            )\n            self.message.value = stored_message\n            message = stored_message\n\n        self.status = message\n        return message\n"
+              },
+              "files": {
+                "_input_type": "FileInput",
+                "advanced": true,
+                "display_name": "Files",
+                "dynamic": false,
+                "fileTypes": [
+                  "csv",
+                  "json",
+                  "pdf",
+                  "txt",
+                  "md",
+                  "mdx",
+                  "yaml",
+                  "yml",
+                  "xml",
+                  "html",
+                  "htm",
+                  "docx",
+                  "py",
+                  "sh",
+                  "sql",
+                  "js",
+                  "ts",
+                  "tsx",
+                  "jpg",
+                  "jpeg",
+                  "png",
+                  "bmp",
+                  "image"
+                ],
+                "file_path": "",
+                "info": "Files to be sent with the message.",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "files",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "temp_file": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "file",
+                "value": ""
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Input Text",
+                "dynamic": false,
+                "info": "Message to be passed as input.",
+                "input_types": [],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "sender": {
+                "_input_type": "DropdownInput",
+                "advanced": true,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Sender Type",
+                "dynamic": false,
+                "external_options": {},
+                "info": "Type of sender.",
+                "name": "sender",
+                "options": [
+                  "Machine",
+                  "User"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "sender_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Sender Name",
+                "dynamic": false,
+                "info": "Name of the sender.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "sender_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "User"
+              },
+              "session_id": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Session ID",
+                "dynamic": false,
+                "info": "The session ID of the chat. If empty, the current session ID parameter will be used.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "session_id",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "should_store_message": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Store Messages",
+                "dynamic": false,
+                "info": "Store the message in the history.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "should_store_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": false,
+          "type": "ChatInput"
+        },
+        "dragging": false,
+        "id": "ChatInput-Kg2yT",
+        "measured": {
+          "height": 49,
+          "width": 192
+        },
+        "position": {
+          "x": 564.9112299773853,
+          "y": 201.79297677097162
+        },
+        "selected": false,
+        "type": "genericNode"
+      }
+    ],
+    "viewport": {
+      "x": -341.5108794219077,
+      "y": 506.48222606840136,
+      "zoom": 0.9027464328827388
+    }
+  },
+  "description": "Transform Your Business with Smart Dialogues.",
+  "endpoint_name": null,
+  "id": "f2eec69f-32f1-4a60-b8c0-f63eda95296a",
+  "is_component": false,
+  "last_tested_version": "1.6.5",
+  "name": "Voice-SQL(6)",
+  "tags": []
+}
