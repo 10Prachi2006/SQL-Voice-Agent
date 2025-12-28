@@ -283,7 +283,7 @@ if 'is_recording' not in st.session_state:
     st.session_state.is_recording = False
 
 # API Configuration
-FLOW_ID = "f2eec69f-32f1-4a60-b8c0-f63eda95296a"
+FLOW_ID = "Your_Flow_ID"
 LANGFLOW_API_URL = f"http://localhost:8000/api/v1/run/{FLOW_ID}"
 
 def record_audio(duration=5, sample_rate=16000):
