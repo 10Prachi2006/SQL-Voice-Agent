@@ -22,10 +22,6 @@
 
 https://vimeo.com/1149629769?share=copy&fl=sv&fe=ci
 
-## 🏗️ Architecture
-
-<img width="1365" height="639" alt="Screenshot 2025-12-27 at 16-02-18 Langflow" src="https://github.com/user-attachments/assets/a04a4bb7-8969-47f8-94a6-5b4e5745e2aa" />
-
 ```
 
 ```
@@ -40,6 +36,9 @@ Voice Input Interface
 
 ### Statistics Panel
 <img width="1365" height="634" alt="Screenshot 2025-12-27 at 16-03-19 Enterprise AI Voice-SQL Platform" src="https://github.com/user-attachments/assets/7770242c-8b1f-489b-b466-ecfc57d0d5cf" />
+
+### Architecture
+<img width="1365" height="639" alt="Screenshot 2025-12-27 at 16-02-18 Langflow" src="https://github.com/user-attachments/assets/a04a4bb7-8969-47f8-94a6-5b4e5745e2aa" />
 
 ## 🚀 Quick Start
 
